@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
+import { StatusBar } from 'expo-status-bar';
 import { Animated, Dimensions, Image, Text, View } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import ONS from '../Components/OnBoarding';
 
 // Logo....
 import Logo from '../assets/image-removebg-preview.png';
@@ -9,6 +11,7 @@ import Home from './Home';
 const BGColor = "#4D4A95"
 
 export default function SplashScreen() {
+    <StatusBar style="auto" />
 
     // SafeArea Value...
     const edges = useSafeAreaInsets();
@@ -39,7 +42,7 @@ export default function SplashScreen() {
                     startAnimation,
                     {
                         // For same Height for non safe Area Devices...
-                        toValue: -Dimensions.get('window').height + (edges.top + 33),
+                        toValue: -Dimensions.get('window').height + (edges.top + 65),
                         useNativeDriver: true
                     }
                 ),
@@ -55,7 +58,7 @@ export default function SplashScreen() {
                     scaleTitle,
                     {
                         // Scaling to 0.8
-                        toValue: 0.8,
+                        toValue: 1.7,
                         useNativeDriver: true
                     }
                 ),
@@ -140,7 +143,7 @@ export default function SplashScreen() {
                     <Animated.Text style={{
                         fontSize: 25,
                         fontWeight: 'bold',
-                        color: '#182748',
+                        color: '#328B77',
                         transform: [
                             { translateY: moveTitle.y },
                             { scale: scaleTitle }
@@ -165,6 +168,9 @@ export default function SplashScreen() {
             }}>
 
                 <Home></Home>
+
+                {/* <ONS></ONS> */}
+                
 
             </Animated.View>
 

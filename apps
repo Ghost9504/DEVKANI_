@@ -5,7 +5,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Splashscreen from './Components/Solashscree';
 
 export default function App() {
-  <StatusBar style="auto" />
   return (
     <SafeAreaProvider>
       <Splashscreen></Splashscreen>
