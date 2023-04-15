@@ -3,7 +3,7 @@ import { Animated, Dimensions, Image, Text, View } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Logo....
-import Logo from '../assets/image-removebg-preview.png';
+import Logo from '../assets/chat.png';
 import Home from './Home';
 
 const BGColor = "#4D4A95"
@@ -39,7 +39,7 @@ export default function SplashScreen() {
                     startAnimation,
                     {
                         // For same Height for non safe Area Devices...
-                        toValue: -Dimensions.get('window').height + (edges.top + 33),
+                        toValue: -Dimensions.get('window').height + (edges.top + 65),
                         useNativeDriver: true
                     }
                 ),
@@ -47,7 +47,7 @@ export default function SplashScreen() {
                     scaleLogo,
                     {
                         // Scaling to 0.35
-                        toValue: 0.45,
+                        toValue: 0.3,
                         useNativeDriver: true
                     }
                 ),
@@ -64,7 +64,7 @@ export default function SplashScreen() {
                     {
                         // Moving to Right Most...
                         toValue: {
-                            x: (Dimensions.get("window").width / 2) - 40,
+                            x: (Dimensions.get("window").width / 2) - 35,
                             y: (Dimensions.get('window').height / 2) - 5
                         },
                         useNativeDriver: true
@@ -108,7 +108,7 @@ export default function SplashScreen() {
         }}>
             <Animated.View style={{
                 flex: 1,
-                backgroundColor: '#F9FAFC',
+                backgroundColor: BGColor,
                 zIndex: 1,
                 transform: [
                     { translateY: startAnimation }
@@ -128,11 +128,6 @@ export default function SplashScreen() {
                             { translateX: moveLogo.x },
                             { translateY: moveLogo.y },
                             { scale: scaleLogo },
-                            {rotate: startAnimation.interpolate({
-                                inputRange: [0, 360],
-                                 outputRange: ['0deg', '0deg']
-                             })}
-                            
 
                         ]
                     }}></Animated.Image>
@@ -140,12 +135,12 @@ export default function SplashScreen() {
                     <Animated.Text style={{
                         fontSize: 25,
                         fontWeight: 'bold',
-                        color: '#182748',
+                        color: 'white',
                         transform: [
                             { translateY: moveTitle.y },
                             { scale: scaleTitle }
                         ]
-                    }}>DevKani</Animated.Text>
+                    }}>Chatty</Animated.Text>
 
                 </Animated.View>
 
