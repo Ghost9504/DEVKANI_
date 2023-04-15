@@ -4,9 +4,10 @@ import { Animated, Dimensions, Image, Text, View } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import ONS from '../Components/OnBoarding';
 
-// Logo....
+// Logo....pages
 import Logo from '../assets/image-removebg-preview.png';
 import Home from './Home';
+import onBoard from './onBoard';
 
 const BGColor = "#4D4A95"
 
