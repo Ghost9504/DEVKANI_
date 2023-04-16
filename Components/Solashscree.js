@@ -8,10 +8,13 @@ import ONS from '../Components/OnBoarding';
 import Logo from '../assets/image-removebg-preview.png';
 import Home from './Home';
 import onBoard from './onBoard';
-
+import {useFonts} from 'expo-font';
 const BGColor = "#4D4A95"
-
+import Onboard from './OnBoarding/Onboard';
 export default function SplashScreen() {
+
+
+
     <StatusBar style="auto" />
 
     // SafeArea Value...
@@ -43,7 +46,7 @@ export default function SplashScreen() {
                     startAnimation,
                     {
                         // For same Height for non safe Area Devices...
-                        toValue: -Dimensions.get('window').height + (edges.top + 65),
+                        toValue: -Dimensions.get('window').height + (edges.top ),
                         useNativeDriver: true
                     }
                 ),
@@ -100,6 +103,17 @@ export default function SplashScreen() {
 
     }, [])
 
+
+
+//Garbage
+  const [loaded] = useFonts({
+    feather_bold_by_typicalbro44_dee263c: require("../assets/Fonts/feather_bold_by_typicalbro44_dee263c.ttf"),
+  });
+  if (!loaded) {
+    return console.log("Mereko nahi chalna");
+  }
+  //Garbage end
+
     // Going to Move Up like Nav Bar...
     return (
 
@@ -142,6 +156,7 @@ export default function SplashScreen() {
                     }}></Animated.Image>
 
                     <Animated.Text style={{
+                        fontFamily: "feather_bold_by_typicalbro44_dee263c",
                         fontSize: 25,
                         fontWeight: 'bold',
                         color: '#328B77',
@@ -168,7 +183,7 @@ export default function SplashScreen() {
                 ]
             }}>
 
-                <Home></Home>
+                <Onboard></Onboard>
 
                 {/* <ONS></ONS> */}
                 
