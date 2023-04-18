@@ -26,7 +26,7 @@ export default Onboard =() =>{
             <View style={{flex:3}}>
             <FlatList 
             data={slides}
-            renderItem={({ item}) => <OnBoardingItem item={item}/>} 
+            renderItem={({ item }) => <OnBoardingItem item={item}/>} 
 
             horizontal
             showsHorizontalScrollIndicator={false}

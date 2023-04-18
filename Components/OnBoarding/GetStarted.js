@@ -24,7 +24,7 @@ export default NextButton = ({percentage}) => {
             height:60,
             borderRadius: 50,
             position: 'absolute',
-            bottom: 69,
+            bottom: 80,
             // left: 0,
             justifyContent: 'center',
             alignItems: 'center',
@@ -65,7 +65,7 @@ const styles= StyleSheet.create({
         backgroundColor: '#0000',
     },
     butto: {
-        width:189,
+        width:250,
         height:50,
         borderRadius: 50,
         justifyContent: 'center',

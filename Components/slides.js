@@ -17,7 +17,7 @@ export default[
         id: '3',
         title: 'Lessons that work for you',
         description: 'Learn and retain, a mix of learning styles.',
-        image: require('../assets/onBoarding/Conversation.json'),
+        image: require('../assets/images/lesson_for_you.gif'),
     },
     // {
     //     id: '4',
